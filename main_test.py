@@ -251,4 +251,6 @@ if __name__ == '__main__':
             cv2.imwrite(osp.join(save_path, save_base_name+'_GS.png'), np.hstack((check_lq, save_generic, save_specific)))
         else:
             cv2.imwrite(osp.join(save_path, save_base_name+'_G.png'), np.hstack((check_lq, save_generic)))
+
+        torch.cuda.empty_cache()
     
